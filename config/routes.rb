@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-  get 'reports/new'
-  get 'reports/show'
-  get 'reports/edit'
-  get 'reports/update'
-  get 'reports/destroy'
-  get 'users/show'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/withdrawal'
-  get 'users/withdrawal_update'
-  get 'homes/top'
-  get 'homes/about'
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/'      => "homes#top"   , as: "top"
+  get '/about' => "homes#about" , as: "about"
+
+  resource :users, only: [:show, :edit, :update]
+  get   'users/withdrawal'          => "users#withdrawal" , as: "withdrawal"
+  patch 'users/withdrawal'   => "users#withdrawal" , as: "withdrawal_update"
+
+  resource :reports, only: [:new, :show, :edit, :update, :destroy]
+
 end
