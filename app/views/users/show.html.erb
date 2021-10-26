@@ -2,7 +2,9 @@
 <div class="container">
 
   <h2>マイページ</h2>
-
+  
+  <p class="text-success"><%= flash[:notice] %></p>
+  
   <div class="row mt-5">
     <div class="col-sm-3">
       <p>ニックネーム</p>
@@ -26,8 +28,10 @@
     </tr>
 
     <% @reports.each do |report|%>
-      <tr><%= link_to "#{report.title}",report_path(report.id) %></tr>
-      <tr><%= report.mountain_name %></tr>
+      <tr>
+        <td><%= link_to "#{report.title}",report_path(report.id) %></td>
+        <td><%= report.mountain_name %></td>
+      </tr>
     <% end %>
 
   </table>

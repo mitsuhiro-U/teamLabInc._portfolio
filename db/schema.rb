@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_23_111420) do
+ActiveRecord::Schema.define(version: 2021_10_26_123336) do
 
   create_table "reports", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "title", null: false
-    t.string "mountain_name", null: false
-    t.string "elevation", null: false
-    t.string "walking_time", null: false
-    t.string "difficulty", null: false
-    t.string "comment", null: false
+    t.string "title"
+    t.string "mountain_name"
+    t.string "elevation"
+    t.string "walking_time"
+    t.string "difficulty"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
