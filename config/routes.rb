@@ -8,9 +8,9 @@ Rails.application.routes.draw do
 
   get   'user/show'          => "users#show"       , as: "users_show"
   get   'user/edit'          => "users#edit"       , as: "users_edit"
-  patch 'user/edit'        => "users#update"     , as: "users_update"
-  get   'user/withdrawal'   => "users#withdrawal" , as: "withdrawal"
-  patch 'user/withdrawal'   => "users#withdrawal" , as: "withdrawal_update"
+  patch 'user/edit'          => "users#update"     , as: "users_update"
+  get   'user/withdrawal'    => "users#withdrawal" , as: "withdrawal"
+  patch 'user/withdrawal'    => "users#withdrawal" , as: "withdrawal_update"
 
   resource :reports, only: [:new, :show, :edit, :update, :destroy]
   get   'reports/index'          => "reports#index" , as: "reports_index"
