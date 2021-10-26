@@ -5,14 +5,12 @@ class ReportsController < ApplicationController
   end
 
   def create
-    report = Report.new(new_report_params)
-    if errors.any?
-      flash[:alert] = "新規レポートの投稿に失敗しました。すべての項目が入力必須です。"
-      render :users_show_path
-    else
-      report.save
+    @report = Report.new(new_report_params)
+    if @report.save
       flash[:notice] = "新規レポートを投稿しました。"
       redirect_to users_show_path
+    else
+      render :new
     end
   end
 

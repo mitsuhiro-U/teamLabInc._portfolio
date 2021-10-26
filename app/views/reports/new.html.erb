@@ -1,12 +1,16 @@
 
 <div class="container">
   <h2>新規レポート投稿</h2>
-  
-   <%= form_with model: @report, local: true do |f| %>
+  <p><span class="text-danger">*</span>は入力必須項目です。</p>
+  <% if @report.errors.any? %>
+    <p class="text-danger">必須項目が入力されていません。</p>
+  <% end%>
+
+  <%= form_with model: @report, local: true do |f| %>
 
     <div class="row mt-5">
       <div class="col-sm-3">
-        <%= f.label :title, "タイトル" %>
+        <%= f.label :title, "タイトル" %><span class="text-danger">*</span>
       </div>
       <div class="col-sm-9">
         <%= f.text_field :title, size: 60 %>
@@ -15,7 +19,7 @@
 
     <div class="row mt-3">
       <div class="col-sm-3">
-        <%= f.label :mountain_name, "山の名称" %>
+        <%= f.label :mountain_name, "山の名称" %><span class="text-danger">*</span>
       </div>
       <div class="col-sm-9">
         <%= f.text_field :mountain_name %>
