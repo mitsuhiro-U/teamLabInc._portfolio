@@ -10,10 +10,9 @@
 
 
 ## 設計書
-- [ワイヤーフレーム user](https://drive.google.com/file/d/18fCcj_lTY-KLA_iTveCKI_30RGQEEvod/view?usp=sharing)
-- [ワイヤーフレーム Enterprise](https://drive.google.com/file/d/1CxqB2U9vOtWPYG0k-evuhg8Z6qe8jkR_/view?usp=sharing)
-- [ER図](https://drive.google.com/file/d/124Dpne8TsEOC2Ym06z4edcPReTgZSs_8/view?usp=sharing)
+- [ER図](https://drive.google.com/file/d/1a8HKXuFVNBHRub50YK3dBqI6VzUAVo0j/view?usp=sharing)
 - [テーブル定義書](https://docs.google.com/spreadsheets/d/185o6gfScVRTZrTMi7lMv-KOn7MLL5uKzFwAr6t_cvx8/edit?usp=sharing)
+- [詳細設計書](https://docs.google.com/spreadsheets/d/1pZ4rAHndeX-8-cM6cpXHPR_42GjRTX7C/edit?usp=sharing&ouid=105068505843146027774&rtpof=true&sd=true)
 
 
 ## 開発環境
