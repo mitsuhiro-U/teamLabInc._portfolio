@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get   'users/withdrawal'          => "users#withdrawal" , as: "withdrawal"
   patch 'users/withdrawal'   => "users#withdrawal" , as: "withdrawal_update"
 
-  resource :reports, only: [:new, :show, :edit, :update, :destroy]
+  resource :reports, only: [:new, :show, :edit, :index, :update, :destroy]
 
 end
