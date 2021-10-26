@@ -1,6 +1,8 @@
 
 <div class="container">
 
+  <h2>マイページ</h2>
+
   <div class="row mt-5">
     <div class="col-sm-3">
       <p>ニックネーム</p>
@@ -13,14 +15,23 @@
     </div>
   </div>
 
+  <div class="space"></div>
+
+  <h4>過去の投稿</h4>
+
   <table class="table">
-    <% @reorts.each do |report|%>
-      <%= link_to "#{report.title}", %>
-    
+    <tr>
+      <th>タイトル</th>
+      <th>山の名称</th>
+    </tr>
+
+    <% @reports.each do |report|%>
+      <tr><%= link_to "#{report.title}",report_path(report.id) %></tr>
+      <tr><%= report.mountain_name %></tr>
     <% end %>
-    
+
   </table>
-    
+
   </div>
 
 </div>
