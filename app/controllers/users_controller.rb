@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @reports = current_user.reports
   end
 
   def edit

@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   get   'user/withdrawal'    => "users#withdrawal" , as: "withdrawal"
   patch 'user/withdrawal'    => "users#withdrawal" , as: "withdrawal_update"
 
-  resource :reports, only: [:new, :show, :edit, :update, :destroy]
-  get   'reports/index'          => "reports#index" , as: "reports_index"
+  resources :reports, only: [:new, :show, :edit, :index, :update, :destroy]
 end

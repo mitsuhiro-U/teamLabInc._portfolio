@@ -11,7 +11,16 @@
     <div class="col-sm-3">
       <%= link_to "ニックネームの変更", users_edit_path %>
     </div>
+  </div>
 
+  <table class="table">
+    <% @reorts.each do |report|%>
+      <%= link_to "#{report.title}", %>
+    
+    <% end %>
+    
+  </table>
+    
   </div>
 
 </div>
