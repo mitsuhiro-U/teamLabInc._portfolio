@@ -26,6 +26,11 @@ class UsersController < ApplicationController
   end
 
   def withdrawal_update
+    user = current_user
+    user.update(is_active: false)
+    reset_session
+    flash[:notice] = "退会処理が完了しました"
+    redirect_to top_path
   end
 
   private

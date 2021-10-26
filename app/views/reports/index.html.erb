@@ -1,1 +1,21 @@
-<h1>reports_index</h1>
+
+<div class="container">
+  <h2>投稿一覧</h2>
+
+  <table class="table">
+    <tr>
+      <th>タイトル</th>
+      <th>山の名称</th>
+      <th>投稿者<th>
+    </tr>
+
+    <% @reports.each do |report|%>
+      <tr>
+        <td><%= link_to "#{report.title}",report_path(report.id) %></td>
+        <td><%= report.mountain_name %></td>
+        <td><%= report.user.nickname %></td>
+      </tr>
+    <% end %>
+
+  </table>
+</div>

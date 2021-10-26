@@ -34,6 +34,7 @@ class ReportsController < ApplicationController
   end
 
   def index
+    @reports = Report.all
   end
 
   def destroy
