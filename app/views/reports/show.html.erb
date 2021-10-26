@@ -1,2 +1,73 @@
-<h1>Reports#show</h1>
-<p>Find me in app/views/reports/show.html.erb</p>
+<div class="container">
+
+  <h2>レポート</h2>
+
+  <div class="row mt-5">
+      <div class="col-sm-3">
+        <p>タイトル</p>
+      </div>
+      <div class="col-sm-9">
+        <%= @report.title %>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-3">
+       <p>山の名称</p>
+      </div>
+      <div class="col-sm-9">
+        <%=@report.mountain_name %>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-3">
+        <p>標高</p>
+      </div>
+      <div class="col-sm-9">
+        <%= @report.elevation %>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-3">
+        <p>歩行時間</p>
+      </div>
+      <div class="col-sm-9">
+        <%= @report.walking_time %>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-3">
+        <p>難易度</p>
+      </div>
+      <div class="col-sm-9">
+         <%= @report.difficulty %>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-3">
+        <p>コメント</p>
+      </div>
+      <div class="col-sm-9">
+        <%= @report.comment %>
+      </div>
+    </div>
+
+
+    <% if @report.user_id == current_user.id%>
+      <div class="row mt-5">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+          <%= link_to "編集する", edit_report_path(@report), class: "btn btn-sm btn-success" %>
+        </div>
+        <div class="col-sm-3">
+          <%= link_to "削除する", report_path(@report), method: :delete, data: {confirm: "削除したデータは復旧出来ません。本当に削除しますか？"}, class: "btn btn-sm btn-danger"  %>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    <% end %>
+
+</div>

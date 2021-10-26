@@ -1,6 +1,6 @@
 
 <div class="center">
-
+  <p class="text-success"><%= flash[:notice] %></p>
   <h2>やまれぽ！！で登山の感想、記録を共有しましょう！</h2>
   <div class="space"></div>
   <h4>
@@ -8,7 +8,7 @@
     他のユーザーと共有する事が出来ます！<br>
     会員登録をしなくても他のユーザーのレポートは見ることが出来ます！<br>
     <div class="space"></div>
-    <%= link_to "試しに見てみる",reports_index_path %>
+    <%= link_to "試しに見てみる",reports_path %>
   </h4>
 
   <div class="space"></div>

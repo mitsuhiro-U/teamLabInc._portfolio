@@ -15,6 +15,7 @@ class ReportsController < ApplicationController
   end
 
   def show
+    @report = Report.find(params[:id])
   end
 
   def edit
@@ -27,6 +28,10 @@ class ReportsController < ApplicationController
   end
 
   def destroy
+    report = Report.find(params[:id])
+    report.destroy
+    flash[:notice] = "対象のレポートを削除しました。"
+    redirect_to users_show_path
   end
 
   private
