@@ -25,12 +25,16 @@
     <tr>
       <th>タイトル</th>
       <th>山の名称</th>
+      <th></th>
+      <th></th>
     </tr>
 
     <% @reports.each do |report|%>
       <tr>
         <td><%= link_to "#{report.title}",report_path(report.id) %></td>
         <td><%= report.mountain_name %></td>
+        <td><%= link_to "編集する", edit_report_path(report.id), class: "btn btn-sm btn-success" %></td>
+        <td><%= link_to "削除する", report_path(report.id), method: :delete, data: {confirm: "削除したデータは復旧出来ません。本当に削除しますか？"}, class: "btn btn-sm btn-danger"  %></td>
       </tr>
     <% end %>
 

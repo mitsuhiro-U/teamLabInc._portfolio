@@ -1,4 +1,7 @@
 class ReportsController < ApplicationController
+
+  before_action :authenticate_user!, except: [:show, :index]
+
   def new
     @report = Report.new
 
